@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Coffee.UIParticleExtensions;
 using UnityEngine.Events;
 using System;
@@ -199,6 +199,12 @@ namespace Coffee.UIExtensions
 
             return Vector3.MoveTowards(current, target, speed);
         }
-
+        
+        public void SetParticleSystem(ParticleSystem particleSystem)
+        {
+            m_ParticleSystem = particleSystem;
+            enabled = true;
+            gameObject.SetActive(true);
+        }
     }
 }
